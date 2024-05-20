@@ -31,7 +31,7 @@ body, html {
     
 }
 
-.top-section {
+.top-section     {
     display: flex;
     padding: 20px 50px;
     justify-content: space-between; /* Align items with equal space between them */
@@ -114,6 +114,26 @@ body, html {
     flex-wrap: wrap; /* Allow sections to wrap */
 }
 
+
+.top-section3, .bottom-section3 {
+    margin-bottom: 20px;
+}
+.full-width-input {
+    width: 100%;
+}
+.left-section3, .right-section3 {
+    display: inline-block;
+    width: 48%;
+    margin-bottom: 10px;
+}
+.left-section3 {
+    margin-right: 4%;
+}
+.separator {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
 /* Styles for the headline */
 
 .container-headline,.container-headline1 {
@@ -126,7 +146,6 @@ body, html {
     margin-bottom: 20px; /* Add margin below the headline */
 }
 .container-headline1{
-    background-image:url(images/questionMark.jpg);
     background-size: cover;
     background-repeat:repeat;
     position: relative;
@@ -386,6 +405,153 @@ body, html {
     justify-content: center;
     padding: 20px 50px;
 }
+
+.top-section4, .bottom-section4 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.top-section4 label,
+.bottom-section4 label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.top-section4 input[type="text"],
+.bottom-section4 input[type="email"],
+.bottom-section4 input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Layout for Email and Telephone Rows */
+.bottom-section4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-section4, .right-section4 {
+    width: calc(50% - 5px);
+}
+
+.right-section4 {
+    margin-left: 10px;
+}
+
+/* Course Selection */
+.course-selection {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+}
+
+.course-selection label {
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.course-selection select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style for Information Container 5 */
+  
+  /* Top Section */
+  .information-container5 .top-section5 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .information-container5 .left-section5,
+  .information-container5 .right-section5 {
+    width: 48%;
+  }
+  .left-section5 label,
+  .right-section5 label,
+  .bottom-section5 label{
+    font-weight: bold;
+    color: #333;
+  }
+  .information-container5 .left-section5 input,
+  .information-container5 .right-section5 input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Second Section */
+  .information-container5 .second-section5 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  /* Bottom Section */
+  
+  .information-container5 .bottom-section5 input[type="file"] {
+    margin-top: 20px;
+    margin-left: 30px;
+    align-items: center;
+  }
+
+
+
+/* Apply the same styles as Information Container 5 */
+.information-container7 {
+    background-color: #f0f0f0; /* Set background color */
+    padding: 20px; /* Add padding */
+    margin: 20px; /* Add margin */
+    border-radius: 10px; /* Add border radius */
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Allow sections to wrap */
+}
+
+.information-container7 .top-section5 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.information-container7 .left-section5,
+.information-container7 .right-section5 {
+    width: 48%;
+}
+
+.information-container7 .left-section5 input,
+.information-container7 .right-section5 input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.information-container7 .bottom-section5 input[type="file"] {
+    margin-top: 20px;
+    margin-left: 30px;
+    align-items: center;
+}
+
 
 
 

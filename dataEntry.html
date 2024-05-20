@@ -96,7 +96,7 @@
                 <div class="left-section2">
                     <!-- First Name -->
                     <div class="section2">
-                        <label for="first_name">First Name</label>
+                        <label for="first_name">Full Name</label>
                         <input type="text" id="first_name" name="first_name">
                     </div>
                     
@@ -119,9 +119,11 @@
                     <div class="section2">
                         <label for="tshirt_size">T-Shirt Size</label>
                         <select id="tshirt_size" name="tshirt_size">
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
+                            <option value="option">--Select Size--</option>
+                            <option value="small">S</option>
+                            <option value="medium">M</option>
+                            <option value="large">L</option>
+                            <option value="Xlarge">XL</option>
                         </select>
                     </div>
                 </div>
@@ -325,7 +327,7 @@
                     
                     <!-- Photo Upload -->
                     <div class="section2">
-                        <label for="photo">Photo</label>
+                        <label for="photo">Your Photo</label>
                         <input type="file" id="photo" name="photo">
                     </div>
                 </div>
@@ -361,20 +363,35 @@
                     <img src="images/Emergency1.jpg" alt="Texture Image" class="texture-image2">
                     <h2 class="headline1">EMERGENCY CONTACT INFORMATION</h2>
                 </div>
-                <div class="top-section3">
-                    <label for="home_address">Home Address</label>
-                    <input type="text" id="home_address" name="home_address" class="form-control full-width-input">
+                <div class="top-section4">
+                    <label for="fathers_full_name">1.Parent/Legal Guardian's Full Name</label>
+                    <input type="text" id="fathers_full_name" name="fathers_full_name" class="form-control full-width-input">
                 </div>
-                
                 <!-- Email and Telephone Row -->
-                <div class="bottom-section3">
-                    <div class="left-section3">
+                <div class="bottom-section4">
+                    <div class="left-section4">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" class="form-control">
                     </div>
-                    <div class="right-section3">
+                    <div class="right-section4">
                         <label for="telephone">Telephone</label>
                         <input type="tel" id="telephone" name="telephone" class="form-control">
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="top-section4">
+                    <label for="mothers_full_name">2.Parent/Legal Guardian's Full Name</label>
+                    <input type="text" id="mothers_full_name" name="mothers_full_name" class="form-control full-width-input">
+                </div>
+                <!-- Email and Telephone Row -->
+                <div class="bottom-section4">
+                    <div class="left-section4">
+                        <label for="email2">Email</label>
+                        <input type="email" id="email2" name="email2" class="form-control">
+                    </div>
+                    <div class="right-section4">
+                        <label for="telephone2">Telephone</label>
+                        <input type="tel" id="telephone2" name="telephone2" class="form-control">
                     </div>
                 </div>
             </div>
@@ -383,87 +400,100 @@
                     <img src="images/Passport.jpg" alt="Texture Image" class="texture-image2">
                     <h2 class="headline1">PASSPORT INFORMATION</h2>
                 </div>
-                <div class="top-section3">
-                    <label for="home_address">Home Address</label>
-                    <input type="text" id="home_address" name="home_address" class="form-control full-width-input">
+                <!-- Top Section -->
+                <div class="top-section5">
+                    <!-- Left Section -->
+                    <div class="left-section5">
+                            <label for="passport_name">Name on Passport</label>
+                            <input type="text" id="passport_name" name="passport_name">
+                    </div>
+                    <!-- Right Section -->
+                    <div class="right-section5">
+                        <label for="given_place">Given Place</label>
+                        <input type="text" id="given_place" name="given_place">
+                    </div>
                 </div>
                 
-                <!-- Email and Telephone Row -->
-                <div class="bottom-section3">
-                    <div class="left-section3">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control">
+                <!-- Second Section -->
+                <div class="second-section5">
+                    <!-- Left Section -->
+                    <div class="left-section5">
+                        <label for="passport_name_2">Passport Number</label>
+                        <input type="text" id="passport_name_2" name="passport_name_2">
                     </div>
-                    <div class="right-section3">
-                        <label for="telephone">Telephone</label>
-                        <input type="tel" id="telephone" name="telephone" class="form-control">
+                    <!-- Right Section -->
+                    <div class="right-section5">
+                        <label for="given_place_2">Expiry Date</label>
+                        <input type="text" id="given_place_2" name="given_place_2">
                     </div>
                 </div>
+                
+                <!-- Bottom Section -->
+                <div class="bottom-section5">
+                    <label for="passport_copy">Upload Passport Copy</label>
+                    <input type="file" id="passport_copy" name="passport_copy">
+                </div> 
             </div>
             <div class="information-container6">
                 <div class="container-headline1">
                     <img src="images/Course.jpg" alt="Texture Image" class="texture-image2">
                     <h2 class="headline1">COURSE SELECTION</h2>
                 </div>
-                <div class="top-section3">
-                    <label for="home_address">Home Address</label>
-                    <input type="text" id="home_address" name="home_address" class="form-control full-width-input">
+                <div class="course-selection">
+                    <label for="course">Course</label>
+                    <select id="course" name="course">
+                        <option value="">-- Select Course --</option>
+                        <option value="course1">Programming With JAVA II</option>
+                        <option value="course2">Introduction To Programming Language</option>
+                        <option value="course3">Calculas II</option>
+                    </select>
                 </div>
                 
-                <!-- Email and Telephone Row -->
-                <div class="bottom-section3">
-                    <div class="left-section3">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control">
-                    </div>
-                    <div class="right-section3">
-                        <label for="telephone">Telephone</label>
-                        <input type="tel" id="telephone" name="telephone" class="form-control">
-                    </div>
-                </div>
+                
             </div>
             <div class="information-container7">
                 <div class="container-headline1">
                     <img src="images/Course.jpg" alt="Texture Image" class="texture-image2">
-                    <h2 class="headline1">HOME UNIVERSITY INFORMATION</h2>
+                    <h2 class="headline1">UNIVERSITY INFORMATION</h2>
                 </div>
-                <div class="top-section3">
-                    <label for="home_address">Home Address</label>
-                    <input type="text" id="home_address" name="home_address" class="form-control full-width-input">
-                </div>
-                
-                <!-- Email and Telephone Row -->
-                <div class="bottom-section3">
-                    <div class="left-section3">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control">
+                    <div class="top-section5">
+                        <div class="left-section5">
+                            <label for="institution-name">Institution Name</label>
+                            <input type="text" id="institution-name" name="institution-name">
+                        </div>
+                        <div class="right-section5">
+                            <label for="department">Department</label>
+                            <input type="text" id="department" name="department">
+                        </div>
                     </div>
-                    <div class="right-section3">
-                        <label for="telephone">Telephone</label>
-                        <input type="tel" id="telephone" name="telephone" class="form-control">
+                    <div class="top-section3">
+                        <label for="institution-address">Institution Address</label>
+                        <textarea id="home_address" name="home_address" class="form-control full-width-input"></textarea>
                     </div>
-                </div>
+                    <div class="top-section5">
+                        <div class="left-section5">
+                            <label for="email">Institution Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="right-section5">
+                            <label for="telephone">Institution Telephone</label>
+                            <input type="tel" id="telephone" name="telephone">
+                        </div>
+                    </div>               
             </div>
             <div class="information-container8">
                 <div class="container-headline1">
                     <img src="images/dollar.jpg" alt="Texture Image" class="texture-image2">
                     <h2 class="headline1">PREFERRED PAYMENT METHOD</h2>
                 </div>
-                <div class="top-section3">
-                    <label for="home_address">Home Address</label>
-                    <input type="text" id="home_address" name="home_address" class="form-control full-width-input">
-                </div>
-                
-                <!-- Email and Telephone Row -->
-                <div class="bottom-section3">
-                    <div class="left-section3">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control">
-                    </div>
-                    <div class="right-section3">
-                        <label for="telephone">Telephone</label>
-                        <input type="tel" id="telephone" name="telephone" class="form-control">
-                    </div>
+                <div class="course-selection">
+                    <label for="course">Payment Method</label>
+                    <select id="course" name="course">
+                        <option value="">-- Select Payment Method --</option>
+                        <option value="course1">Turkish Lira IBAN</option>
+                        <option value="course2">US Dollar IBAN</option>
+                        <option value="course3">EURO IBAN</option>
+                    </select>
                 </div>
             </div>
             
