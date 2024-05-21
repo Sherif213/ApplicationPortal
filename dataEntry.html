@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="dataEntry.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -84,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <form id="myForm" action="/" method="GET" enctype="multipart/form-data">
+            <form id="myForm" action="/submit" method="POST" enctype="multipart/form-data">
             <!-- Information Container 2 -->
             <div class="information-container2">
                 <!-- Headline -->
@@ -372,11 +373,11 @@
                 <div class="bottom-section4">
                     <div class="left-section4">
                         <label for="email2">Email</label>
-                        <input type="email" id="email2" name="email" class="form-control" required>
+                        <input type="email" id="email2" name="fathers_email" class="form-control" required>
                     </div>
                     <div class="right-section4">
                         <label for="telephone2">Telephone</label>
-                        <input type="tel" id="telephone2" name="telephone" class="form-control" required>
+                        <input type="tel" id="telephone2" name="fathers_telephone" class="form-control" required>
                     </div>
                 </div>
                 <div class="separator"></div>
@@ -388,11 +389,11 @@
                 <div class="bottom-section4">
                     <div class="left-section4">
                         <label for="email3">Email</label>
-                        <input type="email" id="email3" name="email2" class="form-control" required>
+                        <input type="email" id="email3" name="mothers_email" class="form-control" required>
                     </div>
                     <div class="right-section4">
                         <label for="telephone3">Telephone</label>
-                        <input type="tel" id="telephone3" name="telephone2" class="form-control" required>
+                        <input type="tel" id="telephone3" name="mothers_full_name" class="form-control" required>
                     </div>
                 </div>
             </div>
@@ -444,9 +445,9 @@
                     <label for="course">Course</label>
                     <select id="course" name="course" required>
                         <option value="">-- Select Course --</option>
-                        <option value="course1">Programming With JAVA II</option>
-                        <option value="course2">Introduction To Programming Language</option>
-                        <option value="course3">Calculas II</option>
+                        <option value="Programming With JAVA II">Programming With JAVA II</option>
+                        <option value="Introduction To Programming Language">Introduction To Programming Language</option>
+                        <option value="Calculas II">Calculas II</option>
                     </select>
                 </div>
                 
@@ -460,7 +461,7 @@
                     <div class="top-section5">
                         <div class="left-section5">
                             <label for="institution-name">Institution Name</label>
-                            <input type="text" id="institution-name" name="institution-name" required>
+                            <input type="text" id="institution-name" name="institution_name" required>
                         </div>
                         <div class="right-section5">
                             <label for="department">Department</label>
@@ -469,16 +470,16 @@
                     </div>
                     <div class="top-section3">
                         <label for="institution-address">Institution Address</label>
-                        <textarea id="institution-address" name="home_address" class="form-control full-width-input" required></textarea>
+                        <textarea id="institution-address" name="institution_address" class="form-control full-width-input" required></textarea>
                     </div>
                     <div class="top-section5">
                         <div class="left-section5">
                             <label for="email4">Institution Email</label>
-                            <input type="email" id="email4" name="email" required>
+                            <input type="email" id="email4" name="institution_email" required>
                         </div>
                         <div class="right-section5">
                             <label for="telephone4">Institution Telephone</label>
-                            <input type="tel" id="telephone4" name="telephone" required>
+                            <input type="tel" id="telephone4" name="institution_telephone" required>
                         </div>
                     </div>               
             </div>
@@ -489,12 +490,12 @@
                 </div>
                 <div class="course-selection">
                     <label for="course2">Payment Method</label>
-                    <select id="course2" name="course" required>
+                    <select id="course2" name="iban" required>
                         <option value="">-- Select Payment Method --</option>
-                        <option value="course1">Turkish Lira IBAN</option>
-                        <option value="course2">US Dollar IBAN</option>
-                        <option value="course3">EURO IBAN</option>
-                    </select>
+                        <option value="ibanTR">Turkish Lira IBAN</option>
+                        <option value="ibanUS">US Dollar IBAN</option>
+                        <option value="ibanEURO">EURO IBAN</option>
+                    </select> 
                 </div>
             </div>
             
@@ -508,7 +509,7 @@
             </div>
             <div class="information-container8">
                 <div class="button-section">
-                    <button type="submit" class="btn btn-success">Submit Application</button>
+                    <button type="submit" class="btn btn-success" >Submit Application</button>
                     <button type="reset" class="btn btn-danger">Reset Field</button>
                 </div>
             </div>
@@ -516,13 +517,12 @@
                 <div class="modal-content">
                     <!-- Your terms and conditions content goes here -->
                     <h2>Terms and Conditions</h2>
-                    <p>A. INTRODUCTION
-
-                        This Agreement governs your use of Apple’s services (“Services” – e.g., and where available, App Store, Apple Arcade, Apple Books, Apple Fitness+, Apple Music, Apple News, Apple News+, Apple One, Apple Podcasts, Apple Podcasts Subscriptions, Apple TV, Apple TV+, Apple TV Channels, Game Center, iTunes), through which you can buy, get, license, rent or subscribe to content, Apps (as defined below), and other in-app services (collectively, “Content”). Content may be offered through the Services by Apple or a third party. Our Services are available for your use in your country or territory of residence (“Home Country”). By creating an account for use of the Services in a particular country or territory you are specifying it as your Home Country. To use our Services, you need compatible hardware, software (latest version recommended and sometimes required) and Internet access (fees may apply). Our Services’ performance may be affected by these factors.</p>
-                    <p>B. PAYMENTS, TAXES, AND REFUNDS
-
-                        You can acquire Content on our Services for free or for a charge, either of which is referred to as a “Transaction.” Each Transaction is an electronic contract between you and Apple, and/or you and the entity providing the Content on our Services. However, if you are a customer of Apple Distribution International Ltd., then Apple Distribution International Ltd. is the merchant of record for some Content you acquire from Apple Books, Apple Podcasts, or App Store as displayed on the product page and/or during the acquisition process for the relevant Service. In such case, you acquire the Content from Apple Distribution International Ltd., which is licensed by the Content provider (e.g., App Provider (as defined below), book publisher, etc.). When you make your first Transaction, we will ask you to choose how frequently we should ask for your password for future Transactions. On applicable hardware, if you enable Touch ID for Transactions, we will ask you to authenticate all Transactions with your fingerprint, and if you enable Face ID for Transactions, we will ask you to authenticate all Transactions using facial recognition. Manage your password settings at any time by following these instructions:</p>   
-                </div>
+                    ‘IAU will not be liable in any way for any loss, injury, sickness or damage that might be caused by third parties that I may suffer while participating in the program, or which results in any way during my participation in the program.
+                <br><br> I am aware and accept that IAU is not responsible for any other liabilities other than organizing and conducting this program. I declare that the information presented in this application and the accompanying documentation is true and correct. I understand that the IAU Academic Relations Office may terminate my application or nomination for the program if I have misrepresented my past and/or present circumstances.
+                <br><br> I authorize IAU staff to make relevant enquiries to verify my application, and should I be approved to go on the program, to provide the necessary information to the required institutions for the purpose of arranging my participation.
+                <br><br> I am aware that I have the right to either transfer to another course or receive a full refund if my course selection is either no longer available or has been cancelled by IAU.’ 
+                <div class="clear"><br><br></div>
+            </div>
             </div>
             </form>
             
@@ -530,13 +530,9 @@
         
             </div>
             <div class="info-container">
-                <p>RESERVED RIGHTS.</p>
             </div>
         </div>
     </div>
     <script src="js/termsConditions.js"></script>
-    <script src="js/form_submission.js"></script>
-    <script src="js/form-validation.js"></script>
-    
     </body>
 </html>

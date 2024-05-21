@@ -1,23 +1,33 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('myForm');
 
     form.addEventListener('submit', (event) => {
-        const inputs = form.querySelectorAll('input[required]');
-        let allFilled = true;
+        event.preventDefault();
+
+        validateInputs();
+    });
+
+    const setError = (element, message) => {
+        const errorDisplay = element.nextElementSibling; // Assuming the error message is the next sibling element
+        errorDisplay.innerText = message;
+        element.classList.add('error');
+    };
+
+    const setSuccess = (element) => {
+        const errorDisplay = element.nextElementSibling; // Assuming the error message is the next sibling element
+        errorDisplay.innerText = '';
+        element.classList.remove('error');
+    };
+
+    const validateInputs = () => {
+        const inputs = form.querySelectorAll('input[required], select[required]');
 
         inputs.forEach(input => {
             if (!input.value.trim()) {
-                allFilled = false;
-                console.log(`Input with id ${input.id} is empty`);
+                setError(input, 'This field is required');
+            } else {
+                setSuccess(input);
             }
         });
-
-        if (!allFilled) {
-            event.preventDefault();
-            console.log('Redirecting to error.html');
-            window.location.href = 'error.html';
-        } else {
-            console.log('All inputs are filled, form will be submitted');
-        }
-    });
+    };
 });
