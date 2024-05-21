@@ -551,8 +551,123 @@ body, html {
     margin-left: 30px;
     align-items: center;
 }
+label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+#modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    display: flex;
+    margin-left: 35%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    width: 33%; /* Width of the modal */
+    height: 50%; /* Height of the modal */
+    max-height: 80%;
+}
+.modal-content h2{
+    margin-bottom: 20px;
+}
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    outline: 2px solid #333;
+    transition: background-color 0.3s ease;
+}
+
+.checkbox-text {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.checkbox-container:hover .checkmark {
+    background-color: #f0f0f0;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 7px;
+    width: 7px;
+    height: 12px;
+    border: solid #0A2853;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.terms-link {
+    color: #ca0000;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+.button-section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.btn-success,.btn-danger{
+    width: 33%;
+    margin: 15px;
+}
 
 
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
 
 
 
